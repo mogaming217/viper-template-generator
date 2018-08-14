@@ -1,0 +1,24 @@
+//
+//  #{DOMAIN}Presenter.swift
+//  #{PROJ_NAME}
+//
+//  Created by Seiya Mogami on #{TODAY}.
+//  Copyright © 2018年 SeiyaMogami. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+protocol #{DOMAIN}PresenterProtocol: class {
+
+}
+
+class #{DOMAIN}Presenter: #{DOMAIN}PresenterProtocol {
+    weak var userInterface: #{DOMAIN}UserInterface!
+    var interactor: #{DOMAIN}InteractorInput!
+    var router: (Router & #{DOMAIN}WireFrame)!
+}
+
+extension #{DOMAIN}Presenter: #{DOMAIN}InteractorOutput {
+
+}

@@ -1,0 +1,21 @@
+//
+//  #{DOMAIN}Interactor.swift
+//  #{PROJ_NAME}
+//
+//  Created by Seiya Mogami on #{TODAY}.
+//  Copyright © 2018年 SeiyaMogami. All rights reserved.
+//
+
+import Foundation
+
+protocol #{DOMAIN}InteractorInput: class {
+
+}
+
+protocol #{DOMAIN}InteractorOutput: class {
+
+}
+
+class #{DOMAIN}Interactor: #{DOMAIN}InteractorInput {
+    weak var presenter: #{DOMAIN}InteractorOutput!
+}

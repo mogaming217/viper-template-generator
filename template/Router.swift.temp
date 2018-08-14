@@ -1,0 +1,30 @@
+//
+//  #{DOMAIN}Router.swift
+//  #{PROJ_NAME}
+//
+//  Created by Seiya Mogami on #{TODAY}.
+//  Copyright © 2018年 SeiyaMogami. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+protocol #{DOMAIN}WireFrame: class {
+    static func create() -> UIViewController
+}
+
+class #{DOMAIN}Router: Router, #{DOMAIN}WireFrame {
+    static func create() -> UIViewController {
+        let vc = UIStoryboard(name: "#{DOMAIN}", bundle: nil).instantiateInitialViewController() as! #{DOMAIN}VC
+        let presenter = #{DOMAIN}Presenter()
+        let interactor = #{DOMAIN}Interactor()
+        let router = #{DOMAIN}Router(viewController: vc)
+        vc.presenter = presenter
+        presenter.userInterface = vc
+        presenter.interactor = interactor
+        presenter.router = router
+        interactor.presenter = presenter
+
+        return vc
+    }
+}

@@ -2,7 +2,7 @@
 const util = require("util");
 const fs = require("fs");
 
-const PROJ_NAME = "WeightCompetition";
+const PROJ_NAME = "yusuke-mitsumoto-line";
 const DOMAIN = process.argv[2];
 const today = new Date();
 

@@ -2,7 +2,7 @@
 const util = require("util");
 const fs = require("fs");
 
-const PROJ_NAME = "yusuke-mitsumoto-line";
+const PROJ_NAME = "talk";
 const DOMAIN = process.argv[2];
 const today = new Date();
 
@@ -16,8 +16,8 @@ const replaceList = [
   ["TODAY", `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`]
 ];
 
-const TEMPLATE_PATH = "./template";
-const DESTINATION_PATH = `./generated/${DOMAIN}`;
+const TEMPLATE_PATH = `${__dirname}/template`;
+const DESTINATION_PATH = `${__dirname}/generated/${DOMAIN}`;
 
 const generate = (template, fileName) => {
   let temp = template;

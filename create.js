@@ -2,8 +2,8 @@
 const util = require("util");
 const fs = require("fs");
 
-const PROJ_NAME = "talk";
 const DOMAIN = process.argv[2];
+const PROJ_NAME = process.argv[3] || "sample";
 const today = new Date();
 
 const print = (message) => {
